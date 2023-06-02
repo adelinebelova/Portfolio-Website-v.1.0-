@@ -22,6 +22,7 @@ body{
     width: 100%;
     height: 100%;
     font-family: "Source Sans Pro";
+    overflow:hidden;
 }
 
 
@@ -88,16 +89,28 @@ body{
 
 }
 
+.hero-image{
+    width:300px;
+    height: auto;
+    position: inline-flex;
+    margin-bottom: 100px;
+    margin-left: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 80px var(--headerfooter); 
+
+    
+}
+
 .hero {
    position: absolute;
     display: flex; 
     align-items: center; 
     height: 100vh; 
+    width: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 800px; 
-    overflow-x: hidden;
 }
 
 .subtitle{
@@ -153,3 +166,4 @@ body{
     padding-left: 90px;
     padding-bottom: 150px;
 }
+
