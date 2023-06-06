@@ -14,6 +14,7 @@
     padding: 0;
     font-size: 100%;
     font-family: 'Open Sans', 'Times New Roman'; 
+    scroll-behavior:smooth;
     
 }
 
@@ -21,8 +22,8 @@ body{
     background-color: var(--background); 
     width: 100%;
     height: 100%;
-    font-family: "Source Sans Pro";
-    overflow:hidden;
+    font-family: 'Open Sans';
+   
 }
 
 
@@ -36,8 +37,9 @@ body{
     position: fixed;
     overflow: hidden;
     z-index: 3;
+    flex-wrap: wrap;
     
-    background: linear-gradient(to bottom, rgba(56, 77, 250, .5) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(35, 47, 157, 0.5) 0%, rgba(0,0,0,0) 100%);
 
 }
 
@@ -50,6 +52,13 @@ body{
     translate: 0 -10%;
     padding-left: 1% !important;
     padding-right: 1% !important;
+    overflow: hidden;
+
+}
+
+.socials:hover{
+    transition: all 0.4s ease-in-out;
+    color: var(--headerfooter);
 }
 
 .topnav a{
@@ -60,20 +69,18 @@ body{
     padding: 14px 16px; 
     font-size: 18px;
     padding: 22px;
-    position: relative; 
     text-decoration: none; 
     font-weight: 300;
+    overflow: hidden;
 }
 
 
 .topnav a:hover{
-    color: white; 
-    transition: all 0.2s;
+    text-decoration: underline 4px var(--headerfooter);
+    transition: all 0.2s ease-in-out;
 }
 
-.topnav a:active{ 
-    color: var(--text);
-}
+
 
 .logo{
     float: left;
@@ -85,32 +92,46 @@ body{
     font-size: 35px;
     padding: 15px;
     opacity: 1 !important;
+    min-width: 250px;
 
 
 }
 
 .hero-image{
-    width:300px;
+    width:320px;
     height: auto;
     position: inline-flex;
     margin-bottom: 100px;
     margin-left: 40px;
     border-radius: 50%;
-    box-shadow: 0 0 80px var(--headerfooter); 
+    box-shadow: 0 0 70px var(--headerfooter);
+    animation: glowing 3s infinite alternate ease-in-out;
+    
+}
 
+@keyframes glowing{
+    from {
+        box-shadow: 0 0 70px var(--headerfooter);
+    }
+    to {
+        box-shadow: 0 0 200px var(--headerfooter);
+    }
     
 }
 
 .hero {
-   position: absolute;
+    position: relative;
     display: flex; 
     align-items: center; 
-    height: 100vh; 
+    height: 800px; 
     width: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     min-width: 800px; 
+    margin-left: 20vh;
+}
+
+.hero-text{
+    position: relative;
+    z-index: 1;
 }
 
 .subtitle{
@@ -128,7 +149,7 @@ body{
 .typewriter{
     z-index: 1;
     color: var(--text);
-    font-size: 60px;
+    font-size: 55px;
     
 }
 
@@ -167,3 +188,124 @@ body{
     padding-bottom: 150px;
 }
 
+
+.about-me{
+    width: 100%;
+    height: 500px;
+    background-color:#060920;
+    display: inline-flex;   
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bio {
+    width: 600px;
+    line-height: 40px;
+    height: 80%;
+    padding: 5%;
+    padding-top: 130px;
+    min-width: 600px;
+}   
+
+.bio-image img{
+    height: 400px;
+    width: auto;
+    padding-top: 100px;
+}
+
+.bio p{
+    color: var(--whiteaccent);
+    letter-spacing: 1px;
+    text-align: left;
+    color: var(--text);
+}
+
+.skills{
+    width: 100%;
+    height: 200px;
+    display: inline-flex;
+    background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(56,77,250,1) 100%);
+}
+
+.skill-text {
+    margin: 0;
+    width: 50%;
+    height: auto;
+    font-size: 50px;
+    margin-left: 60px;
+    margin-top: 30px;
+    font-weight: 600;
+    min-width: 600px !important;
+    overflow:hidden;
+}
+
+.skill-icons{
+    width: 50%;
+    height: auto;
+}
+
+.footer{
+    background-color:  rgba(35, 47, 157, 0.5);
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    color:rgb(105, 105, 120);
+    font-size: 12px;
+    overflow:hidden;
+}
+
+.resume{
+    width: 100%; 
+    height: 400px;
+    color: var(--text);
+    font-size: 20px;
+    display: inline-block;
+    background-color:rgb(21, 13, 80);
+
+}
+
+.resume-photo img{
+    width: 400px;
+    margin-left: 900px;
+    padding-top: 55px;
+}
+
+.resume-links a{
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 15px;
+    position: absolute;
+    width: 250px;
+    text-align: center;
+ 
+}
+
+.tech-resume {
+    position: absolute;
+    padding-left: 300px;
+    padding-top: 125px;
+}
+
+.music-resume {
+    position: absolute; 
+    padding-left: 300px;
+    padding-top: 225px;
+
+}
+
+.download p{
+    position: absolute;
+    font-size: 50px;
+    padding-left: 250px;
+    padding-top: 110px;
+}
+
+.download-2 p{
+    position: absolute;
+    font-size: 50px;
+    padding-left: 250px;
+    padding-top: 210px;
+}
