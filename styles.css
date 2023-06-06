@@ -15,6 +15,7 @@
     font-size: 100%;
     font-family: 'Open Sans', 'Times New Roman'; 
     scroll-behavior:smooth;
+    overflow-anchor: none;
     
 }
 
@@ -27,7 +28,10 @@ body{
 }
 
 
-/* Navigation Bar */
+        /*************
+            NAV BAR 
+        **************/
+        
 .topnav{
     height: 90px; 
     width: 100%; 
@@ -97,12 +101,16 @@ body{
 
 }
 
+        /*************
+            HERO 
+        **************/
+
 .hero-image{
     width:320px;
     height: auto;
     position: inline-flex;
     margin-bottom: 100px;
-    margin-left: 40px;
+    margin-left: 90px;
     border-radius: 50%;
     box-shadow: 0 0 70px var(--headerfooter);
     animation: glowing 3s infinite alternate ease-in-out;
@@ -188,6 +196,9 @@ body{
     padding-bottom: 150px;
 }
 
+        /*************
+            BIO 
+        **************/
 
 .about-me{
     width: 100%;
@@ -220,6 +231,10 @@ body{
     color: var(--text);
 }
 
+        /*************
+            SKILLS 
+        **************/
+
 .skills{
     width: 100%;
     height: 200px;
@@ -227,11 +242,24 @@ body{
     background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(56,77,250,1) 100%);
 }
 
+.colored{
+    background-image: linear-gradient(45deg, #210098, #3400ef, #572dff, #7768ff);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+            background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+         background-clip: text; 
+    -moz-text-fill-color: transparent;
+
+}
+
 .skill-text {
     margin: 0;
     width: 50%;
     height: auto;
-    font-size: 50px;
+    font-size: 45px;
     margin-left: 60px;
     margin-top: 30px;
     font-weight: 600;
@@ -243,6 +271,53 @@ body{
     width: 50%;
     height: auto;
 }
+
+.skill-icons i{
+    font-size: 80px;
+    padding: 12px;
+    margin-top: 40px;
+}
+
+.skill-icons i:nth-child(1){
+    padding-left: 60px;
+}
+
+/* Float */
+.hvr-float {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+
+    /* Same gradient as text */ 
+    background-image: linear-gradient(45deg, #210098, #3400ef, #572dff, #7768ff);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+            background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+            background-clip: text; 
+    -moz-text-fill-color: transparent;
+    transition: all 0.2s ease-in-out;
+    }
+  
+
+        /*************
+            FOOTER 
+        **************/
 
 .footer{
     background-color:  rgba(35, 47, 157, 0.5);
@@ -256,10 +331,13 @@ body{
     overflow:hidden;
 }
 
+        /*************
+            RESUME
+        **************/
+
 .resume{
     width: 100%; 
     height: 400px;
-    color: var(--text);
     font-size: 20px;
     display: inline-block;
     background-color:rgb(21, 13, 80);
@@ -273,9 +351,9 @@ body{
 }
 
 .resume-links a{
-    color: white;
+    color: var(--text);
     text-decoration: none;
-    border: 2px solid white;
+    border: 2px solid var(--text);
     padding: 15px;
     position: absolute;
     width: 250px;
@@ -297,6 +375,7 @@ body{
 }
 
 .download p{
+    color: var(--text);
     position: absolute;
     font-size: 50px;
     padding-left: 250px;
@@ -304,8 +383,23 @@ body{
 }
 
 .download-2 p{
+    color: var(--text);
     position: absolute;
     font-size: 50px;
     padding-left: 250px;
     padding-top: 210px;
 }
+
+.music-resume a:hover{
+    transition: all 0.3s ease-in-out;
+    color: var(--headerfooter);
+    border-color:var(--headerfooter);
+}
+
+.tech-resume a:hover{
+    transition: all 0.3s ease-in-out;
+    color:var(--headerfooter);
+    border-color:var(--headerfooter);
+
+}
+
