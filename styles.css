@@ -138,7 +138,7 @@ body{
     height: auto;
     position: inline-flex;
     margin-bottom: 100px;
-    margin-left: 90px;
+    margin-left: 80px;
     border-radius: 50%;
     box-shadow: 0 0 70px var(--headerfooter);
     animation: glowing 3s infinite alternate ease-in-out;
@@ -161,7 +161,7 @@ body{
     align-items: center; 
     width: 100vw;
     height: 100vh;
-    padding-left: 15vw;
+    padding-left: 13vw;
     margin: 0;
 
 }
@@ -371,9 +371,10 @@ body{
 }
  
 .skill-icons i{
-    font-size: 60px;
+    font-size: 70px;
     padding: 12px;
     padding-top: 80px;
+
     
 }
 
@@ -467,7 +468,7 @@ body{
 
 .resume-photo img{
     max-width: 400px;
-    margin-left: 70vw;
+    margin-left: 60vw;
     padding-top: 55px;
 }
 
