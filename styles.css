@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 
 :root{
@@ -28,6 +28,11 @@ body{
     overflow: auto;
     overflow-x: hidden;
    
+}
+
+#wrapper{
+    overflow: hidden;
+    position: relative;
 }
 
 
@@ -233,7 +238,7 @@ body{
 
     .heading{
         font-size: 40px;
-        margin-top: 250px;
+        margin-top: 180px;
         padding-left: 2em;
 
     }
@@ -243,17 +248,18 @@ body{
     }
 
     .subtitle{
-       translate: 0 300px;
+       translate: 0 280px;
        padding: 0;
        font-size: 20px;
        padding-left: 2em;
        z-index: 3;
+       
     }
 
 
     .hero-image{
         opacity: 1;
-        margin-top: 250px;
+        margin-top: 160px;
         margin-left: 150px;
         max-width: 200px;
     }
@@ -354,12 +360,12 @@ body{
     padding-left: 6vw;
     padding-top: 7vh;
     font-weight: 600;
-    min-width: 600px !important;
-    
+
 }
 
 .skill-icons{
     height: auto;
+    position: relative;
     width: 50%;
     
 }
@@ -368,7 +374,7 @@ body{
     font-size: 60px;
     padding: 12px;
     padding-top: 80px;
-    flex-wrap: wrap;
+    
 }
 
 
@@ -407,14 +413,17 @@ body{
 @media screen and (max-width: 600px) {
     .skills{
         display: block;
+        height: 40vh;
     }
 
     .skill-text{
         font-size: 30px;
+    
     }
 
     .skill-icons i{
         font-size: 45px;
+        
     }
 
     .skill-icons {
@@ -504,6 +513,7 @@ body{
 @media screen and (max-width: 600px){
     .resume{
         display: block;
-        height: 580px;
+
+        
     }
 }
